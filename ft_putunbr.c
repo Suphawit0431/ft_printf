@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssaensuk <ssaensuk@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 20:08:58 by ssaensuk          #+#    #+#             */
-/*   Updated: 2025/10/12 16:53:19 by ssaensuk         ###   ########.fr       */
+/*   Created: 2025/10/12 02:18:53 by ssaensuk          #+#    #+#             */
+/*   Updated: 2025/10/12 22:18:36 by ssaensuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int	ft_putunbr(unsigned int n)
 {
-	write(1, &c, 1);
-	return (1);
+	int	len;
+
+	len = 0;
+	if (n >= 10)
+		len += ft_putunbr(n / 10);
+	len += ft_putchar((n % 10) + '0');
+	return (len);
 }

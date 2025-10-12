@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssaensuk <ssaensuk@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 20:08:58 by ssaensuk          #+#    #+#             */
-/*   Updated: 2025/10/12 16:53:19 by ssaensuk         ###   ########.fr       */
+/*   Created: 2025/10/12 02:22:19 by ssaensuk          #+#    #+#             */
+/*   Updated: 2025/10/12 16:50:20 by ssaensuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int	ft_putptr(unsigned long ptr)
 {
-	write(1, &c, 1);
-	return (1);
+	int	len;
+
+	len = 0;
+	len += ft_putstr("0x");
+	len += ft_puthex(ptr, 'x');
+	return (len);
 }

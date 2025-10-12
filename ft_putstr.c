@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ssaensuk <ssaensuk@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 20:08:58 by ssaensuk          #+#    #+#             */
-/*   Updated: 2025/10/12 16:53:19 by ssaensuk         ###   ########.fr       */
+/*   Created: 2025/10/12 02:07:27 by ssaensuk          #+#    #+#             */
+/*   Updated: 2025/10/12 16:50:36 by ssaensuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int	ft_putstr(char *str)
 {
-	write(1, &c, 1);
-	return (1);
+	int	len;
+
+	len = 0;
+	if (!str)
+		return (ft_putstr("(null)"));
+	while (*str)
+		len += ft_putchar(*str++);
+	return (len);
 }
