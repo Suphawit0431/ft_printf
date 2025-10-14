@@ -6,7 +6,7 @@
 /*   By: ssaensuk <ssaensuk@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 19:11:47 by ssaensuk          #+#    #+#             */
-/*   Updated: 2025/10/14 23:23:34 by ssaensuk         ###   ########.fr       */
+/*   Updated: 2025/10/14 23:38:10 by ssaensuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_printf(const char *format, ...)
 	int		len;
 
 	if (!format)
-		return(-1);
+		return (-1);
 	va_start(argp, format);
 	len = 0;
 	while (*format)
