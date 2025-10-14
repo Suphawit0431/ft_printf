@@ -6,7 +6,7 @@
 /*   By: ssaensuk <ssaensuk@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 20:08:58 by ssaensuk          #+#    #+#             */
-/*   Updated: 2025/10/12 16:53:19 by ssaensuk         ###   ########.fr       */
+/*   Updated: 2025/10/14 23:22:41 by ssaensuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_putchar(char c)
 {
-	write(1, &c, 1);
-	return (1);
+	return (write(1, &c, 1));
 }
